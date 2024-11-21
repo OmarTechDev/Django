@@ -1,7 +1,11 @@
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+from django.contrib.auth.admin import UserAdmin
 from users.models import User
 
 @admin.register(User)
-class UserAdmin(BaseUserAdmin):
-    pass
+class CustomUserAdmin(UserAdmin):
+    model = User
+    # Opcional: Personaliza los campos que deseas mostrar
+    fieldsets = UserAdmin.fieldsets + (
+        (None, {'fields': ('role',)}),
+    )
