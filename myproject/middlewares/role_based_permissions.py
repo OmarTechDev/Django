@@ -8,17 +8,31 @@ class RoleBasedPermissionMiddleware:
     """
     def __init__(self, get_response):
         self.get_response = get_response
+        self.public_routes = [
+            '/',              # Página de inicio
+            '/favicon.ico',
+            '/admin',
+            '/admin/',
+            '/admin/login/?next=/admin/'
+        ]
         self.role_permissions = {
-            '/admin/': ['admin'],
             '/estate/': ['admin', 'agent'],
         }
 
     def __call__(self, request):
+
+        if request.path.startswith('/admin/') or request.path in self.public_routes:
+            return self.get_response(request)
+
+        if request.path in self.public_routes:
+            return self.get_response(request)
+
         try:
             user_auth = JWTAuthentication()
             user, token = user_auth.authenticate(request)
 
             user_role = token.get('role')
+
             if not user_role:
                 return JsonResponse({'error': 'Role not found in token'}, status=403)
 

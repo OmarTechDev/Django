@@ -51,6 +51,9 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
     ),
+    # 'DEFAULT_PERMISSION_CLASSES': (
+    #     'rest_framework.permissions.AllowAny',  # Permitir acceso por defecto
+    # ),
 }
 
 MIDDLEWARE = [
@@ -61,7 +64,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'middlewares.role_based_permissions.RoleBasedPermissionMiddleware',
+    'myproject.middlewares.role_based_permissions.RoleBasedPermissionMiddleware',
 ]
 
 ROOT_URLCONF = 'myproject.urls'

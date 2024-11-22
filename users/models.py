@@ -11,6 +11,5 @@ class User(AbstractUser):
     email = models.EmailField(unique=True)
     role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='user')
 
-    # Configurar email como el campo principal para autenticación
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username']  # Otros campos requeridos además del email
+    REQUIRED_FIELDS = ['username']
