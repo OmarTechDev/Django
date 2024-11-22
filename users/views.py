@@ -6,6 +6,14 @@ from django.contrib.auth.hashers import make_password
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.views import TokenObtainPairView
 from .serializers import CustomTokenObtainPairSerializer
+from .serializers import UserSerializer
+
+class ListUsersView(APIView):
+
+    def get(self, request):
+        users = User.objects.all()  # Obtiene todos los usuarios
+        serializer = UserSerializer(users, many=True)  # Serializa los datos
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 class RegisterUserView(APIView):
     """
