@@ -16,12 +16,12 @@ class RoleBasedPermissionMiddleware:
             '/admin/login/?next=/admin/'
         ]
         self.role_permissions = {
-            '/estate/': ['admin', 'agent'],
+            #'/estate/': ['admin', 'agent'],
         }
 
     def __call__(self, request):
-
-        if request.path.startswith('/admin/') or request.path in self.public_routes:
+        print("path de entrada",request.path)
+        if request.path.startswith('/admin/') or request.path in self.public_routes or request.path.startswith('/api/'):
             return self.get_response(request)
 
         if request.path in self.public_routes:
