@@ -20,6 +20,10 @@ class RoleBasedPermissionMiddleware:
             'user': [
                 'list_users',
                 'register_user'
+            ],
+            'admin': [
+                'list_users',
+                
             ]
         }
 
