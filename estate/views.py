@@ -1,4 +1,5 @@
 from django.template.context_processors import request
+from rest_framework.decorators import action
 from rest_framework.viewsets import ViewSet
 from rest_framework import status
 from rest_framework.response import Response
@@ -40,10 +41,14 @@ class EstateViewSet(ViewSet):
             product = Estate.objects.get(pk=pk)
             product.delete()
             return Response(status=status.HTTP_200_OK, data={pk: "eliminado"})
-        except Product.DoesNotExist:
+        except Estate.DoesNotExist:
             return Response(status=status.HTTP_200_OK, data={pk:"no existe"})
 
-
+    @action(detail=False, methods=['get'], url_path='owner/(?P<owner_id>[^/.]+)')
+    def estates_by_owner(self, request, owner_id):
+        estates = Estate.objects.filter(owner_id=owner_id)
+        serializer = EstateSerializer(estates, many=True)
+        return Response(status=status.HTTP_200_OK, data=serializer.data)
 
 
 

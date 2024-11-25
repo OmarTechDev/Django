@@ -5,6 +5,6 @@ from estate.views import EstateViewSet
 
 router = DefaultRouter()
 
-router.register(prefix='estates',basename='states',viewset=EstateViewSet)
+router.register(prefix='',basename='states',viewset=EstateViewSet)
 
 urlpatterns = router.urls

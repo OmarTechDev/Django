@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76eb011d-7cad-4a7b-9367-c4db55e5d612" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Booking/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Booking/serializer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Booking/service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Booking/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Booking/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Booking/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Booking/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Booking/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estate/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/estate/serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estate/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/estate/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estate/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/estate/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myproject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myproject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +38,24 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "add-crud",
-    "ignore.virus.scanning.warn.message": "true"
+    "ignore.virus.scanning.warn.message": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="Django" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="Django" />
+      </console-settings>
+    </option>
+    <option name="myCommandQueueEnabled" value="true" />
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
